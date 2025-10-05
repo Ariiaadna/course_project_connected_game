@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://33jcy04p3v5q"]
+
+[ext_resource type="Script" uid="uid://caq1qbyxlwarl" path="res://text_input_ui.gd" id="1_7vscj"]
+
+[node name="TextInput" type="Control" node_paths=PackedStringArray("input_field", "panel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vscj")
+input_field = NodePath("CanvasLayer/Panel/TextEdit")
+panel = NodePath("CanvasLayer/Panel")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_right = 625.0
+offset_bottom = 100.0
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_right = 626.0
+offset_bottom = 101.0
