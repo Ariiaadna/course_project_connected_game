@@ -103,4 +103,8 @@ metadata/_aseprite_wizard_source_file_hash_ = "04470b1f597227bf3a9ee2d5bfc38381"
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_o5pru")
 
-[node name="TextInput" parent="." instance=ExtResource("2_mjc1j")]
+[node name="TextInput" parent="." node_paths=PackedStringArray("talk_position") instance=ExtResource("2_mjc1j")]
+talk_position = NodePath("../PlayerTalk")
+
+[node name="PlayerTalk" type="Marker2D" parent="."]
+position = Vector2(0, -11)
