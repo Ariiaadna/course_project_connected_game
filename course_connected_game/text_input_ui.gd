@@ -14,13 +14,13 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if chat_open:
-		if Input.is_action_just_pressed("Chat"):
-			WordlManager.player_can_walk = true
-			chat_open = false
-			panel.visible = false
-			input_field.clear()
-		elif Input.is_action_just_pressed("Accept"):
-		#if Input.is_action_just_pressed("Accept"):
+		#if Input.is_action_just_pressed("Chat"):
+			#WordlManager.player_can_walk = true
+			#chat_open = false
+			#panel.visible = false
+			#input_field.clear()
+		#elif Input.is_action_just_pressed("Accept"):
+		if Input.is_action_just_pressed("Accept"):
 			WordlManager.player_can_walk = true
 			p_text = input_field.text
 			p_text = input_field.text.strip_edges()
