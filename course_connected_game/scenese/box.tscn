@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://ceb3le5s0xngi"]
+
+[ext_resource type="Texture2D" uid="uid://cthpnfh26xpyw" path="res://assets/box.png" id="1_4bl8d"]
+[ext_resource type="PackedScene" uid="uid://r7rry1sivwvb" path="res://scenese/open_component.tscn" id="2_22pcc"]
+[ext_resource type="Script" uid="uid://drgj3x6iiwupa" path="res://scripts/open_component.gd" id="3_tjtaa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22pcc"]
+size = Vector2(18, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22pcc"]
+atlas = ExtResource("1_4bl8d")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjtaa"]
+atlas = ExtResource("1_4bl8d")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dwsdt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22pcc")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjtaa")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_22pcc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dwsdt")
+animation = &"closed"
+
+[node name="OpenComponent" parent="." node_paths=PackedStringArray("animation") instance=ExtResource("2_22pcc")]
+script = ExtResource("3_tjtaa")
+animation = NodePath("../AnimatedSprite2D")

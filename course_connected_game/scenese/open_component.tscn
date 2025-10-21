@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://r7rry1sivwvb"]
+
+[node name="OpenComponent" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+z_index = 15
+offset_left = -66.0
+offset_top = -35.0
+offset_right = 67.0
+offset_bottom = -12.0
+text = "Использовать: E"

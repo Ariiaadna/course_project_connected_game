@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 WordlManager="*res://singletons/WordlManager.gd"
 DialogManager="*res://singletons/DialogManager.gd"
+InteractionManager="*res://singletons/InteractionManager.gd"
 
 [editor_plugins]
 

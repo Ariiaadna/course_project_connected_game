@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://bhehlnr3bu1i"]
+[gd_scene load_steps=8 format=4 uid="uid://bhehlnr3bu1i"]
 
 [ext_resource type="PackedScene" uid="uid://bndng083rqw83" path="res://scenese/ai_talk.tscn" id="1_dh26f"]
 [ext_resource type="PackedScene" uid="uid://cnkg2tc68c7id" path="res://scenese/player.tscn" id="1_o4pno"]
 [ext_resource type="Texture2D" uid="uid://cs8huvgjvgtnr" path="res://assets/tilemap.png" id="2_loqtw"]
 [ext_resource type="PackedScene" uid="uid://bvth8eene61mr" path="res://scenese/ai.tscn" id="4_dh26f"]
+[ext_resource type="PackedScene" uid="uid://ceb3le5s0xngi" path="res://scenese/box.tscn" id="5_cyo6v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3f0ma"]
 texture = ExtResource("2_loqtw")
@@ -40,3 +41,6 @@ tile_map_data = PackedByteArray("AAD6//j/AAACAAEAAAD6//n/AAACAAEAAAD6//r/AAACAAE
 tile_set = SubResource("TileSet_j6sff")
 
 [node name="AI" parent="." instance=ExtResource("4_dh26f")]
+
+[node name="box" parent="." instance=ExtResource("5_cyo6v")]
+position = Vector2(-25, -7)
