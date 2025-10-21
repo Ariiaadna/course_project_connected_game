@@ -17,8 +17,11 @@ func _ready():
 	# under the hood when you use say() as well.
 	self.start_worker()
 
-	self.say("Как ты себя чувствуешь?")
+	#self.say("Как ты себя чувствуешь?")
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("start_dialog"):
+		self.say("Как ты себя чувствуешь?")
 
 func _on_response_updated(token):
 	# this will print every time a new token is generated
