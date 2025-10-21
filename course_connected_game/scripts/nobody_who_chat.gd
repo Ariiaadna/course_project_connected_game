@@ -25,11 +25,15 @@ func _process(delta: float) -> void:
 
 func _on_response_updated(token):
 	# this will print every time a new token is generated
+	DialogManager.is_player_talk = false
+	var dum: String = ""
+	DialogManager.show_thinking()
 	print(token)
 
 
 func _on_response_finished(response):
 	# this will print when the entire response is finishe
 	#label.set_text(clean_message(response))
+	DialogManager.stop_thinking()
 	DialogManager.is_player_talk = false
 	DialogManager.clean_message(response)
