@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://33jcy04p3v5q"]
 
-[ext_resource type="Script" uid="uid://caq1qbyxlwarl" path="res://text_input_ui.gd" id="1_7vscj"]
+[ext_resource type="Script" uid="uid://caq1qbyxlwarl" path="res://scripts/text_input_ui.gd" id="1_7vscj"]
 [ext_resource type="FontFile" uid="uid://dt4aq64tjxnlb" path="res://assets/RuneScape-ENA.ttf" id="2_deby7"]
 
 [node name="TextInput" type="Control" node_paths=PackedStringArray("input_field", "panel")]

@@ -12,8 +12,8 @@ var is_dialog_active = false
 var can_advance_line = false
 
 var position
-var ai_position
-var player_position
+var ai_position : Vector2
+var player_position: Vector2
 var is_player_talk: bool
 
 #func start_dialog(position: Vector2, lines: Array[String]):
@@ -74,6 +74,7 @@ func clean_message(msg: String) -> void:
 		if allowed.find(c) != -1:
 			clean_text += c
 
+	
 	# 3. Разбиваем на предложения вручную
 	var sentences: Array[String] = []
 	var current := ""

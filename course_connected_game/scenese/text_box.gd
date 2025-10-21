@@ -13,7 +13,7 @@ var pun_time = 0.2
 
 signal finished_displaying()
 
-func display_text(text_to_display: String):
+func display_text(text_to_display: String) -> void:
 	text = text_to_display
 	label.text = text_to_display
 	

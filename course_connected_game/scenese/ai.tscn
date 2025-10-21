@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvth8eene61mr"]
+
+[ext_resource type="Script" uid="uid://bcnxm1ldyxut1" path="res://scripts/nobody_who_chat.gd" id="1_3tbpv"]
+
+[node name="AI" type="Node2D"]
+
+[node name="NobodyWhoChat" type="NobodyWhoChat" parent="." node_paths=PackedStringArray("model_node")]
+model_node = NodePath("../NobodyWhoModel")
+script = ExtResource("1_3tbpv")
+
+[node name="NobodyWhoModel" type="NobodyWhoModel" parent="."]
+model_path = "res://models/Qwen_Qwen3-4B-Q4_K_M.gguf"

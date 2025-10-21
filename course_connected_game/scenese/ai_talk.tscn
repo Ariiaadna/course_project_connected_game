@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bndng083rqw83"]
+
+[ext_resource type="Script" uid="uid://b5thtgiyb3fg7" path="res://scripts/ai_talk.gd" id="1_knfll"]
+
+[node name="AITalk" type="Marker2D"]
+script = ExtResource("1_knfll")
