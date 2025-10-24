@@ -2,6 +2,7 @@ extends Node
 
 @onready var text_box_scene = preload("res://scenese/text_box.tscn")
 
+var player_say: String = ""
 var dialog_lines: Array[String] = []
 var current_line_index = 0
 
@@ -122,6 +123,8 @@ func show_thinking():
 	text_box = text_box_scene.instantiate()
 	get_tree().root.add_child(text_box)
 	text_box.global_position = ai_position
+	text_box.global_position.x -= text_box.size.x + 4
+	text_box.global_position.y -= text_box.size.y + 24
 
 	# Пишем начальный текст сразу (label доступен в инстансе text_box)
 	# Если в text_box.label путь другой — поменяй на правильный
@@ -172,3 +175,13 @@ func stop_thinking():
 	if text_box and text_box.is_inside_tree():
 		text_box.queue_free()
 		text_box = null
+
+
+func set_player_say(what_say: String) -> void: 
+	player_say = what_say
+	print ("what_say = ", what_say, " player_say = ", player_say)
+
+func get_player_say() -> String: 
+	print (" player_say = ", player_say)
+	return player_say 
+	

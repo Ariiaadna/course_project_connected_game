@@ -29,6 +29,7 @@ func _process(delta: float) -> void:
 				DialogManager.player_position = talk_position.global_position
 				DialogManager.is_player_talk = true
 				DialogManager.clean_message(p_text)
+				DialogManager.set_player_say(p_text)
 			else:
 				print("Пусто")
 			chat_open = false

@@ -5,7 +5,7 @@ extends NobodyWhoChat
 func _ready():
 	# configure the node (feel free to do this in the UI)
 	self.system_prompt = "Ты помощница игрока, вы заперты в доме. 
-Мило отвечай на запросы. Кратко."
+Мило отвечай на запросы."
 	self.model_node = get_node("../NobodyWhoModel")
 	# connect signals to signal handlers
 	self.response_updated.connect(_on_response_updated)
@@ -21,12 +21,11 @@ func _ready():
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("start_dialog"):
-		self.say("Как ты себя чувствуешь?")
+		self.say(DialogManager.get_player_say())
 
 func _on_response_updated(token):
 	# this will print every time a new token is generated
 	DialogManager.is_player_talk = false
-	var dum: String = ""
 	DialogManager.show_thinking()
 	print(token)
 

@@ -43,4 +43,13 @@ tile_set = SubResource("TileSet_j6sff")
 [node name="AI" parent="." instance=ExtResource("4_dh26f")]
 
 [node name="box" parent="." instance=ExtResource("5_cyo6v")]
-position = Vector2(-25, -7)
+position = Vector2(-64, -6)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("5_cyo6v")]
+position = Vector2(-25, 79)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("5_cyo6v")]
+position = Vector2(-26, -81)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("5_cyo6v")]
+position = Vector2(80, 46)

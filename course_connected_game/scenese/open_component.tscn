@@ -1,11 +1,15 @@
-[gd_scene format=3 uid="uid://r7rry1sivwvb"]
+[gd_scene load_steps=2 format=3 uid="uid://r7rry1sivwvb"]
+
+[ext_resource type="FontFile" uid="uid://dt4aq64tjxnlb" path="res://assets/RuneScape-ENA.ttf" id="1_oslgb"]
 
 [node name="OpenComponent" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
 z_index = 15
-offset_left = -66.0
-offset_top = -35.0
-offset_right = 67.0
-offset_bottom = -12.0
+offset_left = -50.0
+offset_top = -25.0
+offset_right = 48.0
+offset_bottom = -9.0
+theme_override_fonts/font = ExtResource("1_oslgb")
+theme_override_font_sizes/font_size = 16
 text = "Использовать: E"
