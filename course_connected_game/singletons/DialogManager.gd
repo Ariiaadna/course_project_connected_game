@@ -1,6 +1,7 @@
 extends Node
 
 @onready var text_box_scene = preload("res://scenese/text_box.tscn")
+@onready var history_screen = $HistoryScreen# путь к твоему экрану истории
 
 var player_say: String = ""
 var dialog_lines: Array[String] = []
@@ -72,23 +73,31 @@ func _unhandled_input(event):
 			
 		_show_text_box()
 
-
-func clean_message(msg: String) -> void:
-	# 1. Убираем блок <think>...</think>
+func delete_think(msg: String):
 	while true:
 		var start := msg.find("<think>")
 		var end := msg.find("</think>")
 		if start == -1 or end == -1:
 			break
 		msg = msg.substr(0, start) + msg.substr(end + 8) # 8 символов в "</think>"
-
-	# 2. Убираем нечитаемые символы (оставляем буквы, цифры, пробелы и базовую пунктуацию)
+	
 	var allowed := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ0123456789 .,!?;:-()"
 	var clean_text := ""
 	for c in msg:
 		if allowed.find(c) != -1:
 			clean_text += c
+	
+	return clean_text
 
+func clean_message(msg: String) -> void:
+	# 1. Убираем блок <think>...</think>
+	var clean_text = delete_think(msg)
+	# 2. Убираем нечитаемые символы (оставляем буквы, цифры, пробелы и базовую пунктуацию)
+	#var allowed := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ0123456789 .,!?;:-()"
+	#var clean_text := ""
+	#for c in msg:
+		#if allowed.find(c) != -1:
+			#clean_text += c
 	
 	# 3. Разбиваем на предложения вручную
 	var sentences: Array[String] = []
@@ -182,6 +191,25 @@ func set_player_say(what_say: String) -> void:
 	print ("what_say = ", what_say, " player_say = ", player_say)
 
 func get_player_say() -> String: 
-	print (" player_say = ", player_say)
+	#print (" player_say = ", player_say)
 	return player_say 
-	
+
+
+#func update_chat_history(what_say: String, who_say: int):
+		## 1 - player
+		## 2 - AI 
+#
+		#var message = {
+			#"text": what_say,
+			#"who": who_say
+		#}
+		#
+		#
+
+#func print_history():
+	#var speaker = "AI"
+	#for msg in history:
+		#if msg["who"] == 2:
+			#speaker =  "Player"
+			#
+		#print(speaker, ": ", msg["text"]) 

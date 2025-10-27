@@ -30,6 +30,7 @@ func _process(delta: float) -> void:
 				DialogManager.is_player_talk = true
 				DialogManager.clean_message(p_text)
 				DialogManager.set_player_say(p_text)
+				MessageLog.add_message(p_text, 1)
 			else:
 				print("Пусто")
 			chat_open = false

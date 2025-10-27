@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvomtruy2a06o"]
 
-[ext_resource type="Script" uid="uid://ckg1qjd4is0lk" path="res://scenese/text_box.gd" id="1_p2ua6"]
+[ext_resource type="Script" uid="uid://ckg1qjd4is0lk" path="res://scripts/text_box.gd" id="1_p2ua6"]
 [ext_resource type="Texture2D" uid="uid://c35tffmqh8imq" path="res://assets/text_box.png" id="2_kqlpc"]
 [ext_resource type="FontFile" uid="uid://dt4aq64tjxnlb" path="res://assets/RuneScape-ENA.ttf" id="3_n14et"]
 
