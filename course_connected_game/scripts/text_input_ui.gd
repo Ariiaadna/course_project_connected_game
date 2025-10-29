@@ -22,6 +22,8 @@ func _process(delta: float) -> void:
 		#elif Input.is_action_just_pressed("Accept"):
 		if Input.is_action_just_pressed("Accept"):
 			WordlManager.player_can_walk = true
+			WordlManager.history_can_open = true
+			WordlManager.ai_can_otvet = true
 			p_text = input_field.text
 			p_text = input_field.text.strip_edges()
 			if p_text != "":
@@ -39,6 +41,8 @@ func _process(delta: float) -> void:
 	else:
 		if Input.is_action_just_pressed("Chat"):
 			WordlManager.player_can_walk = false
+			WordlManager.history_can_open = false
+			WordlManager.ai_can_otvet = false
 			chat_open = true
 			panel.visible = true
 			input_field.grab_focus()

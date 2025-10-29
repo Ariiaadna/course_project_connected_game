@@ -20,7 +20,7 @@ func _ready():
 	#self.say("Как ты себя чувствуешь?")
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("start_dialog"):
+	if Input.is_action_just_pressed("start_dialog") and WordlManager.ai_can_otvet:
 		self.say(DialogManager.get_player_say())
 		
 func _on_response_updated(token):

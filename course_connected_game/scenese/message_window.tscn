@@ -1,12 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://imxohdoxela6"]
+[gd_scene load_steps=4 format=3 uid="uid://imxohdoxela6"]
 
 [ext_resource type="Script" uid="uid://dwc8uhvhew0y7" path="res://scripts/message_window.gd" id="1_bl61b"]
+[ext_resource type="Theme" uid="uid://bx1sya852jq05" path="res://Theme/interf.tres" id="2_wddit"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bl61b"]
+bg_color = Color(0.7671057, 0.56685376, 0.8672894, 0.80784315)
 
 [node name="MessageWindow" type="Panel"]
 offset_left = 92.0
 offset_top = 73.0
 offset_right = 1108.0
 offset_bottom = 603.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bl61b")
 script = ExtResource("1_bl61b")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
@@ -14,9 +19,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1.0
-offset_bottom = -1.0
+offset_left = 36.0
+offset_top = 29.0
+offset_right = -28.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="MessagesVBox" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
+theme = ExtResource("2_wddit")
 alignment = 1

@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=4 uid="uid://bhehlnr3bu1i"]
+[gd_scene load_steps=8 format=4 uid="uid://bhehlnr3bu1i"]
 
 [ext_resource type="PackedScene" uid="uid://dup414wytbd3c" path="res://scenese/messageWindow.tscn" id="1_cyo6v"]
-[ext_resource type="PackedScene" uid="uid://bndng083rqw83" path="res://scenese/ai_talk.tscn" id="1_dh26f"]
 [ext_resource type="PackedScene" uid="uid://cnkg2tc68c7id" path="res://scenese/player.tscn" id="1_o4pno"]
 [ext_resource type="Texture2D" uid="uid://cs8huvgjvgtnr" path="res://assets/tilemap.png" id="2_loqtw"]
 [ext_resource type="PackedScene" uid="uid://ceb3le5s0xngi" path="res://scenese/box.tscn" id="5_cyo6v"]
@@ -23,9 +22,6 @@ sources/0 = SubResource("TileSetAtlasSource_3f0ma")
 [node name="World" type="Node2D"]
 
 [node name="MessageWindow" parent="." instance=ExtResource("1_cyo6v")]
-
-[node name="AITalk" parent="." instance=ExtResource("1_dh26f")]
-position = Vector2(1, -86)
 
 [node name="Player" parent="." instance=ExtResource("1_o4pno")]
 z_index = 10

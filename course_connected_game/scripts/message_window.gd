@@ -20,7 +20,8 @@ func _ready():
 	_refresh_messages()
 
 func _process(_delta):
-	if Input.is_action_just_pressed("toggle_messages"):
+	if Input.is_action_just_pressed("toggle_messages") \
+	and WordlManager.history_can_open:
 		visible = not visible
 		if visible:
 			# обновляем при открытии
@@ -60,7 +61,7 @@ func _create_message_label(msg: Dictionary) -> Label:
 	var who_text: String = "Player" if who == 1 else "AI"
 	var lbl: Label = Label.new()
 	lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	lbl.custom_minimum_size.x = 400  # <-- минимальная ширина (можно настроить)
+	lbl.custom_minimum_size.x = 950 # <-- минимальная ширина (можно настроить)
 	lbl.text = "%s: %s" % [who_text, String(msg.get("text", ""))]
 	lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
