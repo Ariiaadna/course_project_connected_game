@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqay5mcg58b5t"]
+
+[ext_resource type="Script" uid="uid://cmf21pa2u5xc6" path="res://scripts/activation_component.gd" id="1_4waop"]
+[ext_resource type="FontFile" uid="uid://dt4aq64tjxnlb" path="res://assets/RuneScape-ENA.ttf" id="2_rqot6"]
+
+[node name="ActivationComponent" type="Node2D"]
+script = ExtResource("1_4waop")
+
+[node name="Label" type="Label" parent="."]
+z_index = 15
+offset_left = -50.0
+offset_top = -25.0
+offset_right = 48.0
+offset_bottom = -9.0
+theme_override_fonts/font = ExtResource("2_rqot6")
+theme_override_font_sizes/font_size = 16
+text = "Использовать: E"

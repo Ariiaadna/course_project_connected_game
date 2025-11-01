@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://r7rry1sivwvb"]
+[gd_scene load_steps=3 format=3 uid="uid://r7rry1sivwvb"]
 
 [ext_resource type="FontFile" uid="uid://dt4aq64tjxnlb" path="res://assets/RuneScape-ENA.ttf" id="1_oslgb"]
+[ext_resource type="Script" uid="uid://drgj3x6iiwupa" path="res://scripts/open_component.gd" id="1_pju2r"]
 
 [node name="OpenComponent" type="Node2D"]
+script = ExtResource("1_pju2r")
 
 [node name="Label" type="Label" parent="."]
 z_index = 15

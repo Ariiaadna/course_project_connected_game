@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://bcbco174x17uj"]
+
+[ext_resource type="Script" uid="uid://ofshddsjaap4" path="res://scripts/button.gd" id="1_1ywnw"]
+[ext_resource type="PackedScene" uid="uid://bqay5mcg58b5t" path="res://scenese/activation_component.tscn" id="2_euvqy"]
+[ext_resource type="Texture2D" uid="uid://c7cfqula6q16u" path="res://assets/button.png" id="3_euvqy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sql7o"]
+atlas = ExtResource("3_euvqy")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5md4"]
+atlas = ExtResource("3_euvqy")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_revlu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sql7o")
+}],
+"loop": true,
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5md4")
+}],
+"loop": true,
+"name": &"disactive",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euvqy"]
+size = Vector2(14, 20)
+
+[node name="button" type="StaticBody2D"]
+collision_layer = 3
+script = ExtResource("1_1ywnw")
+
+[node name="ActivationComponent" parent="." node_paths=PackedStringArray("main") instance=ExtResource("2_euvqy")]
+main = NodePath("..")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_revlu")
+animation = &"disactive"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_euvqy")

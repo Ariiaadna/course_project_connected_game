@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=4 uid="uid://bhehlnr3bu1i"]
+[gd_scene load_steps=11 format=4 uid="uid://bhehlnr3bu1i"]
 
 [ext_resource type="PackedScene" uid="uid://dup414wytbd3c" path="res://scenese/messageWindow.tscn" id="1_cyo6v"]
 [ext_resource type="PackedScene" uid="uid://cnkg2tc68c7id" path="res://scenese/player.tscn" id="1_o4pno"]
 [ext_resource type="Texture2D" uid="uid://cs8huvgjvgtnr" path="res://assets/tilemap.png" id="2_loqtw"]
 [ext_resource type="PackedScene" uid="uid://ceb3le5s0xngi" path="res://scenese/box.tscn" id="5_cyo6v"]
+[ext_resource type="PackedScene" uid="uid://dkwj2q5fxrptf" path="res://scenese/cage.tscn" id="6_am4f5"]
 [ext_resource type="PackedScene" uid="uid://bvth8eene61mr" path="res://scenese/ai.tscn" id="6_vr2vm"]
+[ext_resource type="PackedScene" uid="uid://6blv0tq0udtw" path="res://scenese/plate.tscn" id="7_am4f5"]
+[ext_resource type="PackedScene" uid="uid://bcbco174x17uj" path="res://scenese/button.tscn" id="8_bu2ib"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3f0ma"]
 texture = ExtResource("2_loqtw")
@@ -52,3 +55,14 @@ position = Vector2(-26, -81)
 position = Vector2(80, 46)
 
 [node name="AI" parent="." instance=ExtResource("6_vr2vm")]
+
+[node name="Cage" parent="." instance=ExtResource("6_am4f5")]
+position = Vector2(98, 16)
+
+[node name="Plate" parent="." node_paths=PackedStringArray("connection") instance=ExtResource("7_am4f5")]
+position = Vector2(31, 58)
+connection = NodePath("../Cage")
+
+[node name="button" parent="." node_paths=PackedStringArray("connection") instance=ExtResource("8_bu2ib")]
+position = Vector2(-48, 41)
+connection = NodePath("../Cage")
