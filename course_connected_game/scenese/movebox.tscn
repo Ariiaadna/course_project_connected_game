@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyojiv2hwnu04"]
+
+[ext_resource type="Texture2D" uid="uid://w14wsrovmn63" path="res://assets/yashik.png" id="1_yqimy"]
+[ext_resource type="PackedScene" uid="uid://damcb08adplj3" path="res://scenese/pick_up_component.tscn" id="2_l7mhy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22pcc"]
+size = Vector2(16, 16)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 3
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_22pcc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yqimy")
+
+[node name="PickUpComponent" parent="." instance=ExtResource("2_l7mhy")]

@@ -4,6 +4,8 @@ extends CharacterBody2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var player = $"."
 
+@onready var holding = $HoldingComponent
+
 var last_horizontal_anim: String = "right"
 
 func _physics_process(delta: float) -> void:
@@ -17,16 +19,16 @@ func _physics_process(delta: float) -> void:
 		velocity = input_vector * speed
 		move_and_slide()
 		_update_animation(input_vector)
-	
-
 
 func _update_animation(direction: Vector2) -> void:
 	if direction.x > 0:
 		anim.play("right")
 		last_horizontal_anim = "right"
+		holding.current_side = holding.right_hand
 	elif direction.x < 0:
 		anim.play("left")
 		last_horizontal_anim = "left"
+		holding.current_side = holding.left_hand
 	elif direction.y != 0:
 		# При движении вверх/вниз проигрываем последнюю горизонтальную анимацию
 		anim.play(last_horizontal_anim)

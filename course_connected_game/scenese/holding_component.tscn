@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://vl5nsn6srkxm"]
+
+[ext_resource type="Script" uid="uid://b6kk3qn5mixq0" path="res://scripts/holding_component.gd" id="1_3wdrc"]
+
+[node name="HoldingComponent" type="Node2D"]
+script = ExtResource("1_3wdrc")

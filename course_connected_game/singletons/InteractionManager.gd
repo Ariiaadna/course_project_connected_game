@@ -12,6 +12,15 @@ func check_interaction(target, sender):
 		var activate_component = target.get_node("ActivationComponent")
 		activate_component.activate()
 
+func check_pickup(target, sender):
+	if target.has_node("PickUpComponent"):
+		var holding_component = sender.get_node("HoldingComponent")
+		if not holding_component.is_holding:
+			holding_component.pick(target)
+		else:
+			holding_component.drop()
+
+
 func interaction_visible(target):
 	if target.has_node("OpenComponent"):
 		var open_component = target.get_node("OpenComponent")
