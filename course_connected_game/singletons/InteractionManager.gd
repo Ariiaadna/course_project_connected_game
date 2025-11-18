@@ -4,11 +4,15 @@ extends Node
 #!!! Sender тут на будущее, чтобы сразу легко определять куда отрпавялть информацию об предмете
 func check_interaction(target, sender):
 	if target.has_node("OpenComponent"):
-		var item = target.content
-		
 		var open_component = target.get_node("OpenComponent")
 		if not open_component.is_open:
 			open_component.open()
+		if not open_component.container == null:
+			var item = target.content
+			var inventory = sender.get_node("Inventory_Ui")
+			inventory.add_item(item)
+			inventory.update_slots()
+			target.content = null
 	
 	if target.has_node("ActivationComponent"):
 		var activate_component = target.get_node("ActivationComponent")

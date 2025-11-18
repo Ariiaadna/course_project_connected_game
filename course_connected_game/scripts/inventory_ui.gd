@@ -32,4 +32,8 @@ func close():
 	WordlManager.inv_is_open = false
 
 func add_item(item: Item):
-	
+	for i in inv.items.size():
+		if inv.items[i] == null:
+			inv.items[i] = item
+			return true
+	return false

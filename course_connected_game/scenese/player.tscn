@@ -131,6 +131,7 @@ right_hand = NodePath("../Right")
 main = NodePath("..")
 
 [node name="Inventory_Ui" parent="." instance=ExtResource("6_ucb8g")]
+z_index = 15
 offset_left = -39.0
 offset_top = -73.0
 offset_right = 39.0
