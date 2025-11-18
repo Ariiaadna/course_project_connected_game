@@ -3,6 +3,7 @@ extends Node2D
 @onready var label = $Label
 
 @export var animation : AnimatedSprite2D
+@export var container : Node2D
 
 var is_open = false
 

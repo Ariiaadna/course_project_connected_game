@@ -4,6 +4,8 @@ extends Node
 #!!! Sender тут на будущее, чтобы сразу легко определять куда отрпавялть информацию об предмете
 func check_interaction(target, sender):
 	if target.has_node("OpenComponent"):
+		var item = target.content
+		
 		var open_component = target.get_node("OpenComponent")
 		if not open_component.is_open:
 			open_component.open()

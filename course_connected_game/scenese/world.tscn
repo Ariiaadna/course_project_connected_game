@@ -1,12 +1,16 @@
-[gd_scene load_steps=13 format=4 uid="uid://bhehlnr3bu1i"]
+[gd_scene load_steps=17 format=4 uid="uid://bhehlnr3bu1i"]
 
 [ext_resource type="PackedScene" uid="uid://dup414wytbd3c" path="res://scenese/messageWindow.tscn" id="1_cyo6v"]
 [ext_resource type="PackedScene" uid="uid://cnkg2tc68c7id" path="res://scenese/player.tscn" id="1_o4pno"]
 [ext_resource type="Texture2D" uid="uid://cs8huvgjvgtnr" path="res://assets/tilemap.png" id="2_loqtw"]
 [ext_resource type="PackedScene" uid="uid://ceb3le5s0xngi" path="res://scenese/box.tscn" id="5_cyo6v"]
+[ext_resource type="Resource" uid="uid://ca3wqt1xyujxg" path="res://resources/purple_key.tres" id="5_uisaf"]
+[ext_resource type="Resource" uid="uid://gkjktfg88aqg" path="res://resources/red_key.tres" id="6_1n83f"]
 [ext_resource type="PackedScene" uid="uid://dkwj2q5fxrptf" path="res://scenese/cage.tscn" id="6_am4f5"]
 [ext_resource type="PackedScene" uid="uid://bvth8eene61mr" path="res://scenese/ai.tscn" id="6_vr2vm"]
 [ext_resource type="PackedScene" uid="uid://6blv0tq0udtw" path="res://scenese/plate.tscn" id="7_am4f5"]
+[ext_resource type="Resource" uid="uid://dplih2wrofi5i" path="res://resources/yellow_key.tres" id="7_yvlxo"]
+[ext_resource type="Resource" uid="uid://dekcdngbenyey" path="res://resources/blue_key.tres" id="8_2kti5"]
 [ext_resource type="PackedScene" uid="uid://bcbco174x17uj" path="res://scenese/button.tscn" id="8_bu2ib"]
 [ext_resource type="PackedScene" uid="uid://cyojiv2hwnu04" path="res://scenese/movebox.tscn" id="9_vf1kw"]
 [ext_resource type="PackedScene" uid="uid://bndng083rqw83" path="res://scenese/ai_talk.tscn" id="10_afrox"]
@@ -47,15 +51,19 @@ tile_set = SubResource("TileSet_j6sff")
 
 [node name="box" parent="." instance=ExtResource("5_cyo6v")]
 position = Vector2(-64, -6)
+content = ExtResource("5_uisaf")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("5_cyo6v")]
 position = Vector2(-25, 79)
+content = ExtResource("6_1n83f")
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("5_cyo6v")]
 position = Vector2(-26, -81)
+content = ExtResource("7_yvlxo")
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("5_cyo6v")]
 position = Vector2(80, 46)
+content = ExtResource("8_2kti5")
 
 [node name="AI" parent="." instance=ExtResource("6_vr2vm")]
 

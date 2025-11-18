@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ca3wqt1xyujxg"]
+
+[ext_resource type="Script" uid="uid://cyob31es7o0kk" path="res://resources/items.gd" id="1_u2er5"]
+[ext_resource type="Texture2D" uid="uid://bsaouj1h26yp0" path="res://assets/p_key.png" id="2_6g46a"]
+
+[resource]
+script = ExtResource("1_u2er5")
+name = "Фиолетовый ключ"
+texture = ExtResource("2_6g46a")
+id = 1
+metadata/_custom_type_script = "uid://cyob31es7o0kk"

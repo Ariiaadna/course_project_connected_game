@@ -21,7 +21,8 @@ func _ready():
 
 func _process(_delta):
 	if Input.is_action_just_pressed("toggle_messages") \
-	and WordlManager.history_can_open:
+	and WordlManager.history_can_open and not WordlManager.inv_is_open:
+		WordlManager.history_is_open = not WordlManager.history_is_open
 		visible = not visible
 		if visible:
 			# обновляем при открытии

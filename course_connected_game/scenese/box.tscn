@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ceb3le5s0xngi"]
+[gd_scene load_steps=8 format=3 uid="uid://ceb3le5s0xngi"]
 
 [ext_resource type="Texture2D" uid="uid://cthpnfh26xpyw" path="res://assets/box.png" id="1_4bl8d"]
+[ext_resource type="Script" uid="uid://cf7lrx758hte5" path="res://scripts/container.gd" id="1_tjtaa"]
 [ext_resource type="PackedScene" uid="uid://r7rry1sivwvb" path="res://scenese/open_component.tscn" id="2_22pcc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22pcc"]
@@ -35,6 +36,7 @@ animations = [{
 
 [node name="box" type="StaticBody2D"]
 collision_layer = 7
+script = ExtResource("1_tjtaa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
@@ -44,5 +46,6 @@ shape = SubResource("RectangleShape2D_22pcc")
 sprite_frames = SubResource("SpriteFrames_dwsdt")
 animation = &"closed"
 
-[node name="OpenComponent" parent="." node_paths=PackedStringArray("animation") instance=ExtResource("2_22pcc")]
+[node name="OpenComponent" parent="." node_paths=PackedStringArray("animation", "container") instance=ExtResource("2_22pcc")]
 animation = NodePath("../AnimatedSprite2D")
+container = NodePath("..")

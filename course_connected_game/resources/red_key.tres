@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://gkjktfg88aqg"]
+
+[ext_resource type="Script" uid="uid://cyob31es7o0kk" path="res://resources/items.gd" id="1_upu8i"]
+[ext_resource type="Texture2D" uid="uid://dvjnylyw7r1eo" path="res://assets/r_key.png" id="2_0j80n"]
+
+[resource]
+script = ExtResource("1_upu8i")
+name = "Красный ключ"
+texture = ExtResource("2_0j80n")
+id = 3
+metadata/_custom_type_script = "uid://cyob31es7o0kk"

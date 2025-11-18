@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dekcdngbenyey"]
+
+[ext_resource type="Script" uid="uid://cyob31es7o0kk" path="res://resources/items.gd" id="1_825pt"]
+[ext_resource type="Texture2D" uid="uid://bneisvd3torxo" path="res://assets/b_key.png" id="2_l5720"]
+
+[resource]
+script = ExtResource("1_825pt")
+name = "Голубой ключ"
+texture = ExtResource("2_l5720")
+id = 4
+metadata/_custom_type_script = "uid://cyob31es7o0kk"

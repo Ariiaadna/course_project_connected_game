@@ -1,9 +1,10 @@
 extends CharacterBody2D
 
 @export var speed: float = 100.0
+@export var inventory: Inv
+
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var player = $"."
-
 @onready var holding = $HoldingComponent
 
 var last_horizontal_anim: String = "right"
