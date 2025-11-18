@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="Id_based_interactable" load_steps=11 format=3 uid="uid://s2i44ap7iqr8"]
+
+[ext_resource type="Script" uid="uid://o8jwogy4cytk" path="res://resources/id_interactable.gd" id="1_xup0b"]
+[ext_resource type="Texture2D" uid="uid://bd0ysrewru80s" path="res://assets/doors.png" id="2_fpjcv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ec8fg"]
+atlas = ExtResource("2_fpjcv")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwwnf"]
+atlas = ExtResource("2_fpjcv")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5eom1"]
+atlas = ExtResource("2_fpjcv")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8umyf"]
+atlas = ExtResource("2_fpjcv")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52j6u"]
+atlas = ExtResource("2_fpjcv")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lw7r"]
+atlas = ExtResource("2_fpjcv")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmsn1"]
+atlas = ExtResource("2_fpjcv")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ktbj1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ec8fg")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwwnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5eom1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8umyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52j6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lw7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmsn1")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_xup0b")
+texture = SubResource("SpriteFrames_ktbj1")
+id = 1
+metadata/_custom_type_script = "uid://o8jwogy4cytk"

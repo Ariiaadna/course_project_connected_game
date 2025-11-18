@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="Id_based_interactable" load_steps=11 format=3 uid="uid://c6yfyct3c4o6y"]
+
+[ext_resource type="Script" uid="uid://o8jwogy4cytk" path="res://resources/id_interactable.gd" id="1_avlib"]
+[ext_resource type="Texture2D" uid="uid://bd0ysrewru80s" path="res://assets/doors.png" id="2_83h0h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1yky0"]
+atlas = ExtResource("2_83h0h")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oefxr"]
+atlas = ExtResource("2_83h0h")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4asvh"]
+atlas = ExtResource("2_83h0h")
+region = Rect2(112, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7ywy"]
+atlas = ExtResource("2_83h0h")
+region = Rect2(128, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qp0c"]
+atlas = ExtResource("2_83h0h")
+region = Rect2(144, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq3et"]
+atlas = ExtResource("2_83h0h")
+region = Rect2(160, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvcs8"]
+atlas = ExtResource("2_83h0h")
+region = Rect2(176, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jhtxe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1yky0")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oefxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4asvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7ywy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qp0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eq3et")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvcs8")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_avlib")
+texture = SubResource("SpriteFrames_jhtxe")
+id = 2
+metadata/_custom_type_script = "uid://o8jwogy4cytk"

@@ -13,6 +13,12 @@ func update_slots():
 	for i in range(min(inv.items.size(), slots.size())):
 		slots[i].update(inv.items[i])
 
+func has_item_id(target_id: int) -> bool:
+	for item in inv.items:
+		if item != null and item.id == target_id:
+			return true
+	return false
+
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Inventory"):
 		if not is_open and not WordlManager.history_is_open:

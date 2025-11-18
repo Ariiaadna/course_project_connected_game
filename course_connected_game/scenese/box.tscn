@@ -46,6 +46,7 @@ shape = SubResource("RectangleShape2D_22pcc")
 sprite_frames = SubResource("SpriteFrames_dwsdt")
 animation = &"closed"
 
-[node name="OpenComponent" parent="." node_paths=PackedStringArray("animation", "container") instance=ExtResource("2_22pcc")]
+[node name="OpenComponent" parent="." node_paths=PackedStringArray("animation", "container", "main") instance=ExtResource("2_22pcc")]
 animation = NodePath("../AnimatedSprite2D")
 container = NodePath("..")
+main = NodePath("..")

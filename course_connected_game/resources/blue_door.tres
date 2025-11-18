@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="Id_based_interactable" load_steps=11 format=3 uid="uid://bnwp8xlqfpo50"]
+
+[ext_resource type="Script" uid="uid://o8jwogy4cytk" path="res://resources/id_interactable.gd" id="1_xfy87"]
+[ext_resource type="Texture2D" uid="uid://bd0ysrewru80s" path="res://assets/doors.png" id="2_fby6i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2t4h"]
+atlas = ExtResource("2_fby6i")
+region = Rect2(192, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlsm4"]
+atlas = ExtResource("2_fby6i")
+region = Rect2(192, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0c5wx"]
+atlas = ExtResource("2_fby6i")
+region = Rect2(208, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uswfb"]
+atlas = ExtResource("2_fby6i")
+region = Rect2(224, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbr14"]
+atlas = ExtResource("2_fby6i")
+region = Rect2(240, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgdxt"]
+atlas = ExtResource("2_fby6i")
+region = Rect2(256, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwext"]
+atlas = ExtResource("2_fby6i")
+region = Rect2(272, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2uikv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2t4h")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlsm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0c5wx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uswfb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbr14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgdxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwext")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_xfy87")
+texture = SubResource("SpriteFrames_2uikv")
+id = 4
+metadata/_custom_type_script = "uid://o8jwogy4cytk"

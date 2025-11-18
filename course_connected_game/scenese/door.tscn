@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://d5jm6giiaukq"]
+
+[ext_resource type="Script" uid="uid://dqaaoo48uwa75" path="res://scripts/door.gd" id="1_y31sf"]
+[ext_resource type="Texture2D" uid="uid://bd0ysrewru80s" path="res://assets/doors.png" id="2_i0npv"]
+[ext_resource type="PackedScene" uid="uid://r7rry1sivwvb" path="res://scenese/open_component.tscn" id="3_xlgat"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlgat"]
+atlas = ExtResource("2_i0npv")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gbbrv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlgat")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbbrv"]
+size = Vector2(16, 32)
+
+[node name="Door" type="StaticBody2D"]
+collision_layer = 7
+script = ExtResource("1_y31sf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gbbrv")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gbbrv")
+
+[node name="OpenComponent" parent="." node_paths=PackedStringArray("animation", "main") instance=ExtResource("3_xlgat")]
+position = Vector2(0, -4)
+animation = NodePath("../AnimatedSprite2D")
+is_locked = true
+main = NodePath("..")
