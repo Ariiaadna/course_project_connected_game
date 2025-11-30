@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bhehlnr3bu1i"]
+[gd_scene load_steps=23 format=4 uid="uid://bhehlnr3bu1i"]
 
 [ext_resource type="PackedScene" uid="uid://dup414wytbd3c" path="res://scenese/messageWindow.tscn" id="1_cyo6v"]
 [ext_resource type="PackedScene" uid="uid://cnkg2tc68c7id" path="res://scenese/player.tscn" id="1_o4pno"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bcbco174x17uj" path="res://scenese/button.tscn" id="8_bu2ib"]
 [ext_resource type="PackedScene" uid="uid://cyojiv2hwnu04" path="res://scenese/movebox.tscn" id="9_vf1kw"]
 [ext_resource type="PackedScene" uid="uid://bndng083rqw83" path="res://scenese/ai_talk.tscn" id="10_afrox"]
+[ext_resource type="PackedScene" uid="uid://cw1f8sb0g0dsq" path="res://scenese/ai_button.tscn" id="10_rll8o"]
 [ext_resource type="PackedScene" uid="uid://d5jm6giiaukq" path="res://scenese/door.tscn" id="15_yvlxo"]
 [ext_resource type="Resource" uid="uid://c6yfyct3c4o6y" path="res://resources/yellow_door.tres" id="16_2kti5"]
 [ext_resource type="Resource" uid="uid://bo86fqmp3qyxw" path="res://resources/red_door.tres" id="16_qgme5"]
@@ -71,6 +72,9 @@ position = Vector2(80, 46)
 content = ExtResource("8_2kti5")
 
 [node name="AI" parent="." instance=ExtResource("6_vr2vm")]
+
+[node name="ai_button" parent="AI" node_paths=PackedStringArray("connection") instance=ExtResource("10_rll8o")]
+connection = NodePath("../../Cage")
 
 [node name="Cage" parent="." instance=ExtResource("6_am4f5")]
 position = Vector2(98, 16)
