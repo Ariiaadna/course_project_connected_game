@@ -1,11 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvth8eene61mr"]
+[gd_scene load_steps=3 format=3 uid="uid://bvth8eene61mr"]
 
 [ext_resource type="Script" uid="uid://bcnxm1ldyxut1" path="res://scripts/nobody_who_chat.gd" id="1_3tbpv"]
+
+[sub_resource type="NobodyWhoSampler" id="NobodyWhoSampler_3tbpv"]
+use_grammar = true
+gbnf_grammar = "root ::= object
+
+object ::= \"{\" ws \"\\\"answer\\\"\" ws \":\" ws string ws \"}\" ws
+
+string ::= \"\\\"\" (
+    [^\"\\\\\\x7F\\x00-\\x1F] |
+    \"\\\\\" ([\"\\\\bfnrt] | \"u\" [0-9a-fA-F]{4})
+)* \"\\\"\"
+
+ws ::= | \" \" | \"\\n\" [ \\t]{0,20}"
 
 [node name="AI" type="Node2D"]
 
 [node name="NobodyWhoChat" type="NobodyWhoChat" parent="." node_paths=PackedStringArray("model_node")]
 model_node = NodePath("../NobodyWhoModel")
+sampler = SubResource("NobodyWhoSampler_3tbpv")
 script = ExtResource("1_3tbpv")
 
 [node name="NobodyWhoModel" type="NobodyWhoModel" parent="."]

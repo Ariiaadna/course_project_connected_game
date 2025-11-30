@@ -195,6 +195,27 @@ func get_player_say() -> String:
 	return player_say 
 
 
+
+func process_ai_json(json_text: String):
+	var data = JSON.parse_string(json_text)
+	if data == null:
+		push_error("!!!JSON parse failed: " + json_text)
+		return
+
+	# Один текст
+	if data.has("answer"):
+		clean_message(data["answer"])
+		return
+
+	# Массив строк
+	if data.has("lines") and data["lines"] is Array:
+		start_dialog(data["lines"])
+		return
+
+	push_error("!!!Unsupported JSON structure: " + str(data))
+
+
+
 #func update_chat_history(what_say: String, who_say: int):
 		## 1 - player
 		## 2 - AI 

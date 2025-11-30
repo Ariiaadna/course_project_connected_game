@@ -43,6 +43,7 @@ func _process(delta: float) -> void:
 			WordlManager.player_can_walk = false
 			WordlManager.history_can_open = false
 			WordlManager.ai_can_otvet = false
+			WordlManager.history_can_open = false
 			chat_open = true
 			panel.visible = true
 			input_field.grab_focus()

@@ -35,5 +35,6 @@ func _on_response_finished(response):
 	#label.set_text(clean_message(response))
 	DialogManager.stop_thinking()
 	DialogManager.is_player_talk = false
-	DialogManager.clean_message(response)
+	#DialogManager.clean_message(response)
+	DialogManager.process_ai_json(response)
 	MessageLog.add_message(DialogManager.delete_think(response), 2)
