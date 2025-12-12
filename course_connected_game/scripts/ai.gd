@@ -1,5 +1,15 @@
 extends Node2D
 
+@export var enviorment : Env
+@export var button_hidden : bool
+@export var how_hidden : hidden_property
+@export var note : Note
+@export var chest_container : Item
+@export var can_change : bool
+@export var player_node : CharacterBody2D
+
+enum hidden_property { Not, Barricade, Box }
+
 var activation_component: Node = null
 
 func _ready() -> void:

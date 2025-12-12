@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Env" load_steps=8 format=3 uid="uid://dygpaojxy6sgf"]
+
+[ext_resource type="Script" uid="uid://b0vgluuyh5mtb" path="res://resources/aiobject.gd" id="1_g23va"]
+[ext_resource type="Resource" uid="uid://cca6sxls8wchr" path="res://resources/ai_box.tres" id="2_qtk0x"]
+[ext_resource type="Script" uid="uid://dqmo14plq2vf" path="res://resources/env.gd" id="2_s0p2h"]
+[ext_resource type="Resource" uid="uid://078swx1esupu" path="res://resources/ai_note.tres" id="3_m1trt"]
+[ext_resource type="Resource" uid="uid://bu14qfrxwiyyy" path="res://resources/ai_chest.tres" id="4_ix2wt"]
+[ext_resource type="Resource" uid="uid://cxftlrcc36c3c" path="res://resources/ai_button.tres" id="5_7ca6d"]
+[ext_resource type="Resource" uid="uid://dxwht66qud5yv" path="res://resources/ai_barricade.tres" id="6_v1swd"]
+
+[resource]
+script = ExtResource("2_s0p2h")
+enviorment = Array[ExtResource("1_g23va")]([ExtResource("2_qtk0x"), ExtResource("3_m1trt"), ExtResource("4_ix2wt"), ExtResource("5_7ca6d"), ExtResource("6_v1swd")])
+metadata/_custom_type_script = "uid://dqmo14plq2vf"

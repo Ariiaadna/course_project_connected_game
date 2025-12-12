@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Ai_object" load_steps=2 format=3 uid="uid://cca6sxls8wchr"]
+
+[ext_resource type="Script" uid="uid://b0vgluuyh5mtb" path="res://resources/aiobject.gd" id="1_vmq6m"]
+
+[resource]
+script = ExtResource("1_vmq6m")
+name = "Ящик"
+metadata/_custom_type_script = "uid://b0vgluuyh5mtb"

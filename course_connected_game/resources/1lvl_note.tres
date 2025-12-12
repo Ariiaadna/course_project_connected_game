@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Note" load_steps=2 format=3 uid="uid://du3jvfs58th0v"]
+
+[ext_resource type="Script" uid="uid://bkgqnlh0bh4ub" path="res://resources/note.gd" id="1_xjqql"]
+
+[resource]
+script = ExtResource("1_xjqql")
+text = "Дверь открывается при нажатии кнопки"
+metadata/_custom_type_script = "uid://bkgqnlh0bh4ub"
