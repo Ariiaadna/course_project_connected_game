@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://p1df6fy2jm20"]
+
+[ext_resource type="Script" uid="uid://hv0fsdmp17un" path="res://scripts/note_component.gd" id="1_mapma"]
+[ext_resource type="Texture2D" uid="uid://crpf2bu7v6iok" path="res://assets/zapiska.png" id="2_mjeh6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjeh6"]
+size = Vector2(16, 16)
+
+[node name="NoteComponent" type="StaticBody2D"]
+collision_layer = 6
+script = ExtResource("1_mapma")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 8)
+texture = ExtResource("2_mjeh6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_mjeh6")

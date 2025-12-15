@@ -8,6 +8,7 @@ var holding_object = null
 var history_is_open = false
 
 var inv_is_open = false
+var note_is_open = false
 
 func _process(delta: float) -> void:
 	if inv_is_open:

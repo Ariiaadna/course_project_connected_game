@@ -6,8 +6,12 @@ extends CharacterBody2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var player = $"."
 @onready var holding = $HoldingComponent
+@onready var note_show = $Note_show
 
 var last_horizontal_anim: String = "right"
+
+func _ready() -> void:
+	note_show.visible = false
 
 func _physics_process(delta: float) -> void:
 	if WordlManager.player_can_walk:
@@ -20,6 +24,10 @@ func _physics_process(delta: float) -> void:
 		velocity = input_vector * speed
 		move_and_slide()
 		_update_animation(input_vector)
+	
+	if WordlManager.note_is_open and Input.is_action_just_pressed("escape"):
+		note_show.visible = false
+		note_show.text = ""
 
 func _update_animation(direction: Vector2) -> void:
 	if direction.x > 0:

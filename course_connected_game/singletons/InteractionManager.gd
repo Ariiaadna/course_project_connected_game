@@ -18,6 +18,12 @@ func check_interaction(target, sender):
 	if target.has_node("ActivationComponent"):
 		var activate_component = target.get_node("ActivationComponent")
 		activate_component.activate()
+	
+	if target.name == "NoteComponent":
+		sender.note_show.text = target.text
+		sender.note_show.visible = true
+		WordlManager.note_is_open = true
+
 
 func unlocked_interaction(target, sender):
 	var open_component = target.get_node("OpenComponent")

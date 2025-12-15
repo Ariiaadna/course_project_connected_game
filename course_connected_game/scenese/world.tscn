@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://bhehlnr3bu1i"]
+[gd_scene load_steps=26 format=4 uid="uid://bhehlnr3bu1i"]
 
 [ext_resource type="PackedScene" uid="uid://dup414wytbd3c" path="res://scenese/messageWindow.tscn" id="1_cyo6v"]
 [ext_resource type="PackedScene" uid="uid://cnkg2tc68c7id" path="res://scenese/player.tscn" id="1_o4pno"]
@@ -22,6 +22,7 @@
 [ext_resource type="Resource" uid="uid://bo86fqmp3qyxw" path="res://resources/red_door.tres" id="16_qgme5"]
 [ext_resource type="Resource" uid="uid://s2i44ap7iqr8" path="res://resources/purple_door.tres" id="17_rll8o"]
 [ext_resource type="Resource" uid="uid://bnwp8xlqfpo50" path="res://resources/blue_door.tres" id="18_4cja8"]
+[ext_resource type="PackedScene" uid="uid://p1df6fy2jm20" path="res://scenese/note_component.tscn" id="23_tojkw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3f0ma"]
 texture = ExtResource("2_loqtw")
@@ -117,3 +118,7 @@ stat = ExtResource("18_4cja8")
 [node name="Door4" parent="." instance=ExtResource("15_yvlxo")]
 position = Vector2(144, 16)
 stat = ExtResource("16_2kti5")
+
+[node name="NoteComponent" parent="." instance=ExtResource("23_tojkw")]
+position = Vector2(72, -80)
+note = ExtResource("11_edg7e")
