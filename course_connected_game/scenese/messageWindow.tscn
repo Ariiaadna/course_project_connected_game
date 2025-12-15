@@ -13,3 +13,4 @@ grow_vertical = 2
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MessageWindow" parent="CanvasLayer" instance=ExtResource("1_ddl43")]
+visible = false

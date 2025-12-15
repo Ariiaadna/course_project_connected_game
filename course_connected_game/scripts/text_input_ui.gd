@@ -24,6 +24,8 @@ func _process(delta: float) -> void:
 			WordlManager.player_can_walk = true
 			WordlManager.history_can_open = true
 			WordlManager.ai_can_otvet = true
+			WordlManager.inv_can_open = true
+			WordlManager.chat_is_open = false
 			p_text = input_field.text
 			p_text = input_field.text.strip_edges()
 			if p_text != "":
@@ -38,12 +40,13 @@ func _process(delta: float) -> void:
 			chat_open = false
 			panel.visible = false
 			input_field.clear()
-	else:
+	elif !chat_open and WordlManager.chat_can_open:
 		if Input.is_action_just_pressed("Chat"):
 			WordlManager.player_can_walk = false
 			WordlManager.history_can_open = false
 			WordlManager.ai_can_otvet = false
-			WordlManager.history_can_open = false
+			WordlManager.inv_can_open = false
+			WordlManager.chat_is_open = true
 			chat_open = true
 			panel.visible = true
 			input_field.grab_focus()

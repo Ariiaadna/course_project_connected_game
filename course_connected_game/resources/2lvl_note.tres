@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Note" load_steps=2 format=3 uid="uid://2u4rgv7acqas"]
+
+[ext_resource type="Script" uid="uid://bkgqnlh0bh4ub" path="res://resources/note.gd" id="1_pa5li"]
+
+[resource]
+script = ExtResource("1_pa5li")
+text = "За ящиками прячуться кнопки."
+metadata/_custom_type_script = "uid://bkgqnlh0bh4ub"

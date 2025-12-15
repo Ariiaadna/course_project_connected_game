@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Env" load_steps=5 format=3 uid="uid://dcia0em1ln0h1"]
+
+[ext_resource type="Script" uid="uid://b0vgluuyh5mtb" path="res://resources/aiobject.gd" id="1_qhwv4"]
+[ext_resource type="Resource" uid="uid://cca6sxls8wchr" path="res://resources/ai_box.tres" id="2_h64yx"]
+[ext_resource type="Script" uid="uid://dqmo14plq2vf" path="res://resources/env.gd" id="2_hhu4v"]
+[ext_resource type="Resource" uid="uid://cxftlrcc36c3c" path="res://resources/ai_button.tres" id="3_1d0jw"]
+
+[resource]
+script = ExtResource("2_hhu4v")
+enviorment = Array[ExtResource("1_qhwv4")]([ExtResource("2_h64yx"), ExtResource("3_1d0jw")])
+metadata/_custom_type_script = "uid://dqmo14plq2vf"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Env" load_steps=6 format=3 uid="uid://y1nab8uovs5d"]
+
+[ext_resource type="Script" uid="uid://b0vgluuyh5mtb" path="res://resources/aiobject.gd" id="1_c730j"]
+[ext_resource type="Resource" uid="uid://078swx1esupu" path="res://resources/ai_note.tres" id="2_a84w0"]
+[ext_resource type="Script" uid="uid://dqmo14plq2vf" path="res://resources/env.gd" id="2_x1eao"]
+[ext_resource type="Resource" uid="uid://cntb276bvvw1h" path="res://resources/ai_teleport.tres" id="3_a84w0"]
+[ext_resource type="Resource" uid="uid://bu14qfrxwiyyy" path="res://resources/ai_chest.tres" id="4_im7nt"]
+
+[resource]
+script = ExtResource("2_x1eao")
+enviorment = Array[ExtResource("1_c730j")]([ExtResource("2_a84w0"), ExtResource("3_a84w0"), ExtResource("4_im7nt")])
+metadata/_custom_type_script = "uid://dqmo14plq2vf"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cnkg2tc68c7id"]
+[gd_scene load_steps=19 format=4 uid="uid://cnkg2tc68c7id"]
 
 [ext_resource type="Script" uid="uid://bg2i2hxenf1d2" path="res://scripts/player.gd" id="1_uwcw8"]
 [ext_resource type="PackedScene" uid="uid://33jcy04p3v5q" path="res://scenese/text_input.tscn" id="2_mjc1j"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dgqvgjg6a1c67" path="res://scenese/inventory_ui.tscn" id="6_ucb8g"]
 [ext_resource type="Theme" uid="uid://bx1sya852jq05" path="res://Theme/interf.tres" id="7_3amci"]
 [ext_resource type="FontFile" uid="uid://dt4aq64tjxnlb" path="res://assets/RuneScape-ENA.ttf" id="7_ucb8g"]
+[ext_resource type="PackedScene" uid="uid://dup414wytbd3c" path="res://scenese/messageWindow.tscn" id="9_2m77m"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_o5pru"]
 _data = PackedByteArray("AAADAAUAAAABAAAAMAAAAEAAAADwAgAAUklGRugCAABXRUJQVlA4TNwCAAAvL8APEA/BJgDAJHP3YRH4SUB4knBxu1ODcWxbaT7usqQDKICeaDyyd0/YRrat5Lv/6GeCtUABtE8fxG4Z742AoMj/0QIA0aRppT2lMz3NdDEm8muq1RHtJ7W/Y6x0gCXCLjFHLQNaRwSAPH9fL4AfMTcA+IMDIXVEZePKY32IlzYPepeUn/WJ0fYJ47mAbFt76yZyEmwDPfD/nAnKVH7/t0Sy5eFq5i6i/w7ctnEk++pW5gb3ifTvX+CNfT/wKyFLXyJ0zzjwylLrt7UWviF2xw6ydJ9+WvgRu2OHKZy5FhMwdk84SilqLarlJ7F7Zg5KrVVrrS5D96QDFNE7VdteSpPYHTtA0UFak8g96WhNra2pyIR7ztFXyHPsnnCcKX0znxG6T7Ej4cS831v3PRORe8aR8DLOS8Lj2MHQ8ZLAvHcxSOzA+5xrWf4sy9KF2Tmym8NYA1emS86ra84WgwwYcOld8oDkfvjNuqoKU8IznUOMAceSziVf7n8lsq3ktoqQDrI5hwhP/jTv2FaefwKSPnTrBPf0rgsSTpEjAU+83WjbASTQKdyVDnNfzPE5cNjgx3HwOMYKAKRJAkefriPFFf73sVx7h7/B/1fxwb5vwK+EpS+J0D3jwBtL/bbWWviK2B07Plhqrd2HQsbu2GHPUqpzmyR0Tzh+UlSLWm3UyD3h8Km12nbhhHvCIa0U1Tu17SJE7I4d0togKkTsnphDRFtTa2tCBO4px5kU7Ru7pxx4Zpa+POMUuSccYN73e+ueeUICI3fseBnnBYljxyPSS+hg3vvsmX/veIdlWZY/y2Lp5sjOkWlh7l0Oxpzz6pqzZQQxBhIepHf5iOq6WVXFRVTFOfiMlNKXdC7x60yRdSPXTYSWE0WcYyMtZ66bd/TrRB/SzX1xLveIHW6dAd5utO1PQErgYQzQaTBwfJrjguRkx+G29woSgJeEDp+uA4Wb/+oluA4dV6RfbwI=")
@@ -149,3 +150,5 @@ theme_override_fonts/font = ExtResource("7_ucb8g")
 theme_override_font_sizes/font_size = 16
 editable = false
 wrap_mode = 1
+
+[node name="MessageWindow" parent="." instance=ExtResource("9_2m77m")]

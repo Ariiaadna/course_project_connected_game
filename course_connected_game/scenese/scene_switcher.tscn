@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://wsepwbs8n5nc"]
+
+[ext_resource type="Script" uid="uid://bg1s5u36llohq" path="res://scripts/scene_switcher.gd" id="1_a5wg6"]
+[ext_resource type="Texture2D" uid="uid://dthyyf21l4yxg" path="res://assets/portal.png" id="2_2p5pg"]
+[ext_resource type="FontFile" uid="uid://dt4aq64tjxnlb" path="res://assets/RuneScape-ENA.ttf" id="3_8y7vh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2p5pg"]
+size = Vector2(16, 32)
+
+[node name="SceneSwitcher" type="Area2D"]
+script = ExtResource("1_a5wg6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2p5pg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_2p5pg")
+
+[node name="Label" type="Label" parent="."]
+z_index = 15
+offset_left = -66.0
+offset_top = -32.0
+offset_right = 67.0
+offset_bottom = -16.0
+theme_override_fonts/font = ExtResource("3_8y7vh")
+theme_override_font_sizes/font_size = 16
+text = "Я не могу уйти без неё"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

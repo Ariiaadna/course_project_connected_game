@@ -27,9 +27,10 @@ func _process(delta: float) -> void:
 			close()
 
 func open():
-	visible = true
-	is_open = true
-	WordlManager.inv_is_open = true
+	if WordlManager.inv_can_open:
+		visible = true
+		is_open = true
+		WordlManager.inv_is_open = true
 
 
 func close():

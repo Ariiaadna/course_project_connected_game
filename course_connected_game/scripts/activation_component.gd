@@ -23,8 +23,12 @@ func activate():
 			connection.deactivate()
 			is_active = false
 			main.open()
-	elif not is_swtichable and not is_active:
+	elif not is_swtichable and not is_active and not main.name == "ai_button":
 		connection.activate()
 		is_active = true
+		label.visible = false
+		main.closed()
+	elif not is_swtichable and  main.name == "ai_button":
+		connection.activate()
 		label.visible = false
 		main.closed()

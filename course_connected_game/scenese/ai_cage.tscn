@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqlp6ljjwpo6"]
+
+[ext_resource type="Script" uid="uid://ct1bpllnbn6fe" path="res://scripts/ai_cage.gd" id="1_b3hac"]
+
+[node name="Ai_Cage" type="Node2D"]
+script = ExtResource("1_b3hac")

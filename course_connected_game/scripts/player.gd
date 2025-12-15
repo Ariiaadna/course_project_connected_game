@@ -28,6 +28,7 @@ func _physics_process(delta: float) -> void:
 	if WordlManager.note_is_open and Input.is_action_just_pressed("escape"):
 		note_show.visible = false
 		note_show.text = ""
+		WordlManager.note_is_open = false
 
 func _update_animation(direction: Vector2) -> void:
 	if direction.x > 0:

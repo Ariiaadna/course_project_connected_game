@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22pcc"]
 size = Vector2(16, 16)
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="MoveBox" type="StaticBody2D"]
 collision_layer = 3
 collision_mask = 5
 

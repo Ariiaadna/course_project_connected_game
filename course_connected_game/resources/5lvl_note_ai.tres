@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Note" load_steps=2 format=3 uid="uid://duvh3pcqydlp2"]
+
+[ext_resource type="Script" uid="uid://bkgqnlh0bh4ub" path="res://resources/note.gd" id="1_u00ev"]
+
+[resource]
+script = ExtResource("1_u00ev")
+text = "Это последнее испытание перед свободой!"
+metadata/_custom_type_script = "uid://bkgqnlh0bh4ub"

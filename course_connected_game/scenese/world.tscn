@@ -13,9 +13,9 @@
 [ext_resource type="Resource" uid="uid://dekcdngbenyey" path="res://resources/blue_key.tres" id="8_2kti5"]
 [ext_resource type="PackedScene" uid="uid://bcbco174x17uj" path="res://scenese/button.tscn" id="8_bu2ib"]
 [ext_resource type="PackedScene" uid="uid://cyojiv2hwnu04" path="res://scenese/movebox.tscn" id="9_vf1kw"]
-[ext_resource type="Resource" uid="uid://dygpaojxy6sgf" path="res://resources/1lvl.tres" id="10_4cja8"]
 [ext_resource type="PackedScene" uid="uid://bndng083rqw83" path="res://scenese/ai_talk.tscn" id="10_afrox"]
 [ext_resource type="PackedScene" uid="uid://cw1f8sb0g0dsq" path="res://scenese/ai_button.tscn" id="10_rll8o"]
+[ext_resource type="Resource" uid="uid://cfnrgrsbo1dqa" path="res://resources/testlvl.tres" id="10_tojkw"]
 [ext_resource type="Resource" uid="uid://du3jvfs58th0v" path="res://resources/1lvl_note.tres" id="11_edg7e"]
 [ext_resource type="PackedScene" uid="uid://d5jm6giiaukq" path="res://scenese/door.tscn" id="15_yvlxo"]
 [ext_resource type="Resource" uid="uid://c6yfyct3c4o6y" path="res://resources/yellow_door.tres" id="16_2kti5"]
@@ -24,7 +24,7 @@
 [ext_resource type="Resource" uid="uid://bnwp8xlqfpo50" path="res://resources/blue_door.tres" id="18_4cja8"]
 [ext_resource type="PackedScene" uid="uid://p1df6fy2jm20" path="res://scenese/note_component.tscn" id="23_tojkw"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3f0ma"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tojkw"]
 texture = ExtResource("2_loqtw")
 0:0/0 = 0
 2:0/0 = 0
@@ -36,7 +36,7 @@ texture = ExtResource("2_loqtw")
 [sub_resource type="TileSet" id="TileSet_j6sff"]
 physics_layer_0/collision_layer = 5
 physics_layer_0/collision_mask = 5
-sources/0 = SubResource("TileSetAtlasSource_3f0ma")
+sources/0 = SubResource("TileSetAtlasSource_tojkw")
 
 [node name="World" type="Node2D"]
 
@@ -75,7 +75,7 @@ position = Vector2(80, 46)
 content = ExtResource("8_2kti5")
 
 [node name="AI" parent="." node_paths=PackedStringArray("player_node") instance=ExtResource("6_vr2vm")]
-enviorment = ExtResource("10_4cja8")
+enviorment = ExtResource("10_tojkw")
 button_hidden = true
 how_hidden = 2
 note = ExtResource("11_edg7e")

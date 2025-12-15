@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ddtj04hlbk0cb"]
+
+[node name="END" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 1158.0
+offset_bottom = 646.0
+text = "ВЫ ПРОШЛИ
+МОЛОДЦЫ
+СПАСИБО
+ЗА
+ИГРУ
+"
