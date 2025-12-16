@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cnkg2tc68c7id"]
+[gd_scene load_steps=20 format=4 uid="uid://cnkg2tc68c7id"]
 
 [ext_resource type="Script" uid="uid://bg2i2hxenf1d2" path="res://scripts/player.gd" id="1_uwcw8"]
 [ext_resource type="PackedScene" uid="uid://33jcy04p3v5q" path="res://scenese/text_input.tscn" id="2_mjc1j"]
@@ -78,6 +78,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5pru"]
 size = Vector2(16, 25)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2m77m"]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.6, 0.35686275, 0.6, 0.3764706)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_uwcw8")
 inventory = ExtResource("2_sw8iw")
@@ -148,6 +159,8 @@ offset_bottom = 17.0
 theme = ExtResource("7_3amci")
 theme_override_fonts/font = ExtResource("7_ucb8g")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_2m77m")
+text = "за ящиками прячутся кнопки"
 editable = false
 wrap_mode = 1
 

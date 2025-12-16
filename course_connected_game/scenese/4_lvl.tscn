@@ -52,7 +52,7 @@ ai_lvl_prompt = "Путь для тебя закрыт решеткой. Ска�
 has_cage = true
 
 [node name="AITalk" parent="." instance=ExtResource("7_0n8dn")]
-position = Vector2(336, -115)
+position = Vector2(335, -97)
 
 [node name="button" parent="." node_paths=PackedStringArray("connection") instance=ExtResource("7_b4pk3")]
 position = Vector2(423, -97)

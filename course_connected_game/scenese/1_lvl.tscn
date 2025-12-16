@@ -75,7 +75,7 @@ player_node = NodePath("../Player")
 ai_lvl_prompt = "У тебя в комнате ничего нет. Ты можешь свободно пойти дальше. Но ты хочешь подождать игрока. Скажи игроку, что он может осмотреться, может где-то есть ключ от двери."
 
 [node name="AITalk" parent="." instance=ExtResource("12_g0xsn")]
-position = Vector2(336, -115)
+position = Vector2(336, -99)
 
 [node name="SceneSwitcher" parent="." instance=ExtResource("3_jbmrf")]
 position = Vector2(536, 0)

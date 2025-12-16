@@ -56,7 +56,7 @@ door_id = 4
 [node name="ai_button" parent="AI" instance=ExtResource("8_q5l4u")]
 
 [node name="AITalk" parent="." instance=ExtResource("9_ttoco")]
-position = Vector2(336, -115)
+position = Vector2(334, -93)
 
 [node name="MoveBox" parent="." instance=ExtResource("8_00oy2")]
 position = Vector2(295, -41)

@@ -71,7 +71,7 @@ position = Vector2(458.16364, 0.5250015)
 next_lvl = ExtResource("9_hj04w")
 
 [node name="AITalk" parent="." instance=ExtResource("12_6ck8t")]
-position = Vector2(336, -115)
+position = Vector2(320, -105)
 
 [node name="box" parent="." instance=ExtResource("5_bjm1m")]
 position = Vector2(424, -96)
